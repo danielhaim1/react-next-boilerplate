@@ -3,6 +3,7 @@ import '../src/sass/style.scss'
 import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
+import Symbols from '../components/symbols'
 
 const Home = () => (
   <div>
@@ -12,6 +13,7 @@ const Home = () => (
       <link rel='icon' href='/static/favicon.ico' />
     </Head>
 
+    <Symbols />
     <Nav />
 
     <div className='hero'>
