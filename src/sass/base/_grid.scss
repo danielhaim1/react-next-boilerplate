@@ -1,0 +1,81 @@
+// =================================
+// # _grid.scss
+// =================================
+
+// # Grid
+.container {
+    @include make-container();
+    @include make-container-max-widths();
+}
+
+.row {
+    @include make-row;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.row + .row,
+.container + .container {
+    margin-top: $grid-gutter-width;
+}
+
+@include make-grid-columns;
+
+@include media-breakpoint-only(xs){
+    .col-1:nth-of-type(n+13),
+    .col-3:nth-of-type(n+5),
+    .col-4:nth-of-type(n+4),
+    .col-12:nth-of-type(n+2),
+    .col-6:nth-of-type(n+3){
+        margin-top: $grid-gutter-width;
+    }
+}
+
+@include media-breakpoint-only(sm){
+    .col-sm-1:nth-of-type(n+13),
+    .col-sm-3:nth-of-type(n+5),
+    .col-sm-4:nth-of-type(n+4),
+    .col-sm-12:nth-of-type(n+2),
+    .col-sm-6:nth-of-type(n+3){
+        margin-top: $grid-gutter-width;
+    }
+}
+
+@include media-breakpoint-only(md){
+    .col-md-1:nth-of-type(n+13),
+    .col-md-3:nth-of-type(n+5),
+    .col-md-4:nth-of-type(n+4),
+    .col-md-12:nth-of-type(n+2),
+    .col-md-6:nth-of-type(n+3){
+        margin-top: $grid-gutter-width;
+    }
+}
+
+@include media-breakpoint-only(lg){
+    .col-lg-1:nth-of-type(n+13),
+    .col-lg-3:nth-of-type(n+5),
+    .col-lg-4:nth-of-type(n+4),
+    .col-lg-12:nth-of-type(n+2),
+    .col-lg-6:nth-of-type(n+3){
+        margin-top: $grid-gutter-width;
+    }
+}
+
+@include media-breakpoint-up(xl){
+    .col-xl-1:nth-of-type(n+13),
+    .col-xl-3:nth-of-type(n+5),
+    .col-xl-4:nth-of-type(n+4),
+    .col-xl-12:nth-of-type(n+2),
+    .col-xl-6:nth-of-type(n+3){
+        margin-top: $grid-gutter-width;
+    }
+}

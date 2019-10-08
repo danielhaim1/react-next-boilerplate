@@ -1,0 +1,20 @@
+// =================================
+// # _root.scss
+// =================================
+
+:root {
+    // ! grayscale colors
+    @each $color, $value in $color-grayscale {
+      --#{$color}: #{$value};
+    }
+
+    // ! brand colors
+    @each $color, $value in $color-brand {
+      --#{$color}: #{$value};
+    }
+
+
+    --font-family-base: #{inspect($font-family-sans-serif)};
+    --font-family-sans-serif: #{inspect($font-family-sans-serif)};
+    --font-family-monospace: #{inspect($font-family-monospace)};
+}

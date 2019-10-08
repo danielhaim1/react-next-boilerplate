@@ -1,0 +1,205 @@
+// =================================
+// # _reset.scss
+// =================================
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@at-root {
+    @-ms-viewport {
+        width: device-width;
+    }
+}
+
+
+html, body,
+h1, h2, h3, h4, h5, h6, p, ul, ol, li,
+figure, figcaption, blockquote,
+input, select, optgroup, textarea{
+  margin: 0;
+}
+
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+// future-proof rule: in browsers that support :focus-visible, suppress the focus outline
+// see https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
+[tabindex="-1"]:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+abbr[title],
+abbr[data-original-title] {
+    cursor: help;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+    border-bottom: 0;
+}
+
+address {
+    font-style: normal;
+    line-height: inherit;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+figure {
+    margin: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-image-width: 0;
+    vertical-align: middle;
+    border-style: none;
+
+    &[src=""]{display: none;}
+}
+
+
+// ! workaround for the SVG overflow bug in IE 11
+svg:not(:root) {
+    overflow: hidden;
+}
+
+a,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation;
+}
+
+input,
+select,
+button,
+progress,
+[type="button"],
+[type="submit"],
+[type="reset"],
+[type="search"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    // ! add "hand" cursor to non-disabled button elements.
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+}
+
+// ! remove inner border and padding from Firefox
+::-moz-focus-inner{
+    padding: 0;
+    border-style: none;
+}
+
+// ! prevent double borders
+table {
+    border-collapse: collapse;
+}
+
+// ! matches default `<td>` alignment by inheriting from the `<body>`, or the
+th {
+    text-align: inherit;
+}
+
+// ! allow labels to use `margin` for spacing.
+label {
+    display: inline-block;
+}
+
+// ! remove the inheritance of word-wrap in Safari.
+select{
+    word-wrap: normal;
+}
+
+// ! remove the inheritance of text transform in Firefox
+button,
+select {
+  text-transform: none;
+}
+
+// ! remove the dropdown arrow in Chrome from inputs built with datalists.
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+
+input[type="radio"],
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+// ! remove the default appearance of temporal inputs to avoid a Mobile Safari
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    -webkit-appearance: textfield;
+}
+
+// ! remove the default vertical scrollbar in IE.
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+// ! remove the inner padding in Chrome and Safari on macOS.
+::-webkit-search-cancel-button,
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+
+// ! fix height of inputs with a type of datetime-local, date, month, week, or time
+::-webkit-datetime-edit {
+  overflow: visible;
+  line-height: 0;
+}
+
+// ! change font properties to `inherit` in Safari.
+// ! correct the inability to style clickable types in iOS and Safari.
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-play-state: paused !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,21 @@
+// =================================
+// # _maps.scss
+// =================================
+
+$color-grayscale: (
+  black: $bc-black,
+  white: $bc-white,
+  offwhite: $bc-offwhite,
+  grey-lightest: $grey-lightest,
+  grey-lighter: $grey-lighter,
+  grey-light: $grey-light,
+  grey: $grey,
+  grey-dark: $grey-dark,
+  grey-darker: $grey-darker,
+  grey-darkest: $grey-darkest
+);
+
+$color-brand: (
+    body-color: $bc-black,
+    body-bg: $bc-white,
+);

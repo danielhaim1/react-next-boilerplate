@@ -1,0 +1,113 @@
+// =================================
+// # _typography.scss
+// =================================
+
+html {
+    font-size: $base-font-size;
+}
+
+@media (min-width: 576px) {html {font-size: $base-font-size + 1;}}
+@media (min-width: 768px) {html {font-size: $base-font-size + 2;}}
+@media (min-width: 992px) {html {font-size: $base-font-size + 3;}}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+
+    font-family: var(--font-family-base);
+    font-weight: 400;
+
+    // ! prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+    // ! change the default tap highlight to be completely transparent in iOS.
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    // ! bug
+    -ms-overflow-style: scrollbar;
+
+    // ! anti-aliasing when fonts are rendered.
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    // ! font variants
+    font-variant-ligatures: common-ligatures;
+    font-feature-settings: 'liga';
+}
+
+h1 {font-size: $h1-font-size;}
+h2 {font-size: $h2-font-size;}
+h3 {font-size: $h3-font-size;}
+h4 {font-size: $h4-font-size;}
+h5 {font-size: $h5-font-size;}
+h6 {font-size: $h6-font-size;}
+
+// ! large heading
+h1, h2, h3 {
+    font-weight: $large-heading-font-weight;
+    font-style: $large-heading-font-style;
+    margin-top: $large-heading-margin-t;
+    margin-bottom: $large-heading-margin-b;
+    text-indent: $large-heading-text-indent;
+    letter-spacing: $large-heading-letter-spacing;
+    hyphens: none;
+}
+
+// ! small heading
+h4, h5, h6 {
+    font-weight: $small-heading-font-weight;
+    font-style: $small-heading-font-style;
+    margin-top: $small-heading-margin-t;
+    margin-bottom: $small-heading-margin-b;
+    text-indent: $small-heading-text-indent;
+    letter-spacing: $small-heading-letter-spacing;
+    hyphens: none;
+}
+
+// ! paragraphs
+p, ul, ol, blockquote {
+    font-size: $p-font-size;
+    font-weight: $p-font-weight;
+    line-height: $p-line-height;
+    margin-bottom: $p-margin-bottom;
+    letter-spacing: $p-letter-spacing;
+}
+
+// ! labels
+label{
+    font-size: $labels-font-size;
+    font-weight: $labels-font-weight;
+    text-indent: $labels-text-indent;
+    letter-spacing: $labels-letter-spacing;
+    line-height: $labels-line-height;
+}
+
+// ! small
+small {
+    font-size: $small-font-size;
+    display: inline-block;
+}
+
+
+// ! vertical rhythms
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, blockquote,
+form, table{
+    &:first-child{margin-top: 0;padding-top: 0;}
+    &:last-child{margin-bottom: 0; padding-bottom: 0;}
+}
+
+hr + *{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.max-lf{
+    h1, h2, h3, h4, h5, h6, p{
+        max-width: $max-longform;
+    }
+}

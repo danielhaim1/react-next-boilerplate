@@ -1,0 +1,135 @@
+// =================================
+// # _core.scss
+// =================================
+
+// ! font family
+$font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+// ! colors
+$bc-white: #FFFFFF;
+$bc-black: #000000;
+$bc-offwhite: #F4F4F2;
+$grey-lightest: #F4F4F4;
+$grey-lighter: #E9E9E9;
+$grey-light: #dedede;
+$grey: #7C7C7C;
+$grey-dark: #484848;
+$grey-darker: #343434;
+$grey-darkest: #1f1f1f;
+
+// ! font size
+$base-font-size: 16px;
+
+$h6-font-size: 0.833rem;
+$h5-font-size: 1rem;
+$h4-font-size: 1.2rem;
+$h3-font-size: 1.44rem;
+$h2-font-size: 1.728rem;
+$h1-font-size: 2.074rem;
+$h0-font-size: 2.488rem;
+
+// ! large heading (h1, h2, h3)
+$large-heading-line-height: 1.2 !default;
+$large-heading-text-indent: -0.07em !default;
+$large-heading-letter-spacing: 0 !default;
+$large-heading-font-weight: 700 !default;
+$large-heading-font-style: normal !default;
+$large-heading-margin-t: 1.44em !default;
+$large-heading-margin-b: 1em !default;
+
+// ! small heading (h4,h5,h6)
+$small-heading-line-height: 1.2 !default;
+$small-heading-text-indent: 0 !default;
+$small-heading-letter-spacing: 0 !default;
+$small-heading-font-weight: 700 !default;
+$small-heading-font-style: normal !default;
+$small-heading-margin-t: 1.44em !default;
+$small-heading-margin-b: 0.833em !default;
+
+// ! paragraphs
+$p-font-size: 1rem !default;
+$p-line-height: 1.44 !default;
+$p-margin-bottom: 1.424em !default;
+$p-font-weight: 400 !default;
+$p-letter-spacing: 0 !default;
+
+$small-font-size: 0.833rem;
+
+// ! forms
+$labels-font-size: 1rem !default;
+$labels-line-height: 1.2 !default;
+$labels-text-indent: -0.07em !default;
+$labels-letter-spacing: 0 !default;
+$labels-font-weight: bold !default;
+
+// ! horizontal rule
+$hr-xs-margin: ($base-font-size * 1.2) * 2;
+$hr-sm-margin: ($base-font-size * 1.44) * 2;
+$hr-md-margin: ($base-font-size * 1.728) * 2;
+$hr-lg-margin: ($base-font-size * 2.074) * 3; 
+
+// ! long forms
+$max-longform: 39.292rem !default;
+
+// ! spacer
+$spacer: 15px !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+
+$spacers: (
+    0: (x: 0, y: 0),
+    1: (x: $spacer-x * 0.5, y: $spacer-y * 0.5),
+    2: (x: $spacer-x * 1, y: $spacer-y * 1),
+    3: (x: $spacer-x, y: $spacer-y),
+    4: (x: $spacer-x * 1.5, y: $spacer-y * 1.5),
+    5: (x: $spacer-x * 2, y: $spacer-y * 2)
+) !default;
+
+// ! easing
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+
+// ! grid framework
+$grid-columns: 12 !default;
+$grid-row-columns: 6 !default;
+$grid-gutter-width: 1rem !default;
+
+// ! container padding
+$container-padding-x: $grid-gutter-width / 2 !default;
+
+// ! breakpoints
+$sm-devices: 576px;
+$sm-devices-max: 540px;
+
+$md-devices: 768px;
+$md-devices-max: 720px;
+
+$lg-devices: 992px;
+$lg-devices-max: 960px;
+
+$xl-devices: 1200px;
+$xl-devices-max: 1140px;
+
+// ! grid breakpoints
+// ! define layout min/max
+$grid-breakpoints: (
+    xs: 0,
+    sm: $sm-devices,
+    md: $md-devices,
+    lg: $lg-devices,
+    xl: $xl-devices
+) !default;
+
+// Containers
+$container-max-widths: (
+    sm: $sm-devices-max,
+    md: $md-devices-max,
+    lg: $lg-devices-max,
+    xl: $xl-devices-max
+) !default;
