@@ -9,7 +9,13 @@ const withSass = require('@zeit/next-sass');
 
 module.exports = withCSS(withSass({
 
-    /* config options here */
+    // ! remove automatic static indicator
+    // https://nextjs.org/docs#automatic-static-optimization-indicator
+    devIndicators: {
+      autoPrerender: false,
+    },
+
+
     publicConfig: {
         isDev: process.env.NODE_ENV === 'development',
         env: process.env.NODE_ENV,
