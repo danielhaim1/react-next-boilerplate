@@ -1,7 +1,7 @@
 {
   "name": "react-next-boilerplate",
   "description": "a react + next.js boilerplate template",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,7 +14,8 @@
     "next": "9.3.4",
     "node-sass": "^4.13.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "kind-of": ">=6.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.5",
