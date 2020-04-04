@@ -1,12 +1,18 @@
-# react-next-boilerplate
+# React + Next.js Boilerplate
 
-a React + Next.js template, prepackaged w/ SASS, Autoprefixer, PostCSS, and cssnano
+<img src="https://i.imgur.com/M8L55IJ.png" alt="Terser" width="400">
+
+React + Next.js boilerplate, pre-prepackaged w/ [sass](https://github.com/sass/sass), [Autoprefixer](https://github.com/autoprefixer/autoprefixer.github.io), [postcss](https://github.com/postcss/postcss), and [cssnano](https://github.com/cssnano/cssnano).
+
+---
 
 ## Installation
 
 ```shell
 $ npm install
 ```
+
+---
 
 ## Commands
 
@@ -16,9 +22,11 @@ $ npm run start
 $ npm run build
 ```
 
+---
+
 ## Folder structure
 
-```
+```shell
 react-next-boilerplate
 ├── components
 │   ├── nav.js
@@ -59,3 +67,13 @@ next.config.js
 postcss.config.js
 package.json
 ```
+
+----
+
+## Support
+If you don't find the answer to your problem in the documentation, or have a suggestion for improvements, submit your question [here](https://github.com/danielhaim1/issues).
+
+----
+
+## License
+see the [LICENSE](LICENSE) file for details.
